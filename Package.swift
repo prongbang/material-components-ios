@@ -24,7 +24,8 @@ let package = Package(
                 "MaterialComponents",
                 .product(name: "MDFInternationalization", package: "material-internationalization-ios"),
                 .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios"),
-            ]
+            ],
+            path: "Sources/MaterialComponentsWrapper"
         )
     ]
 )
