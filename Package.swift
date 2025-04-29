@@ -9,8 +9,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/prongbang/material-internationalization-ios.git", branch: "main"),
-        .package(url: "https://github.com/prongbang/material-text-accessibility-ios.git", branch: "main"),
+        .package(url: "https://github.com/prongbang/material-internationalization-ios.git", exact: "1.0.0"),
+        .package(url: "https://github.com/prongbang/material-text-accessibility-ios.git", exact: "1.0.0"),
     ],
     targets: [
         .binaryTarget(
