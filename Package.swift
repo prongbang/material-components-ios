@@ -6,7 +6,7 @@ let package = Package(
     products: [
         .library(
             name: "MaterialComponents",
-            targets: ["MaterialComponents", "MDFInternationalization", "MDFTextAccessibility"]
+            targets: ["MaterialComponentsPackage", "MDFInternationalizationPackage", "MDFTextAccessibilityPackage"]
         ),
     ],
     dependencies: [
@@ -15,26 +15,26 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "MaterialComponents",
+            name: "MaterialComponentsPackage",
             url: "https://github.com/prongbang/material-components-ios-spm/releases/download/124.2.0/MaterialComponents.xcframework.zip",
             checksum: "d7b83a1bc307dbddb44ecdd0c031752fa26a872e51232fa59ecfc02068b3bc2a"
         ),
         // This just forwards the dependency products
         .target(
-            name: "MDFInternationalization",
+            name: "MDFInternationalizationPackage",
             dependencies: [
                 .product(name: "MDFInternationalization", package: "material-internationalization-ios")
             ],
             path: "Sources",
-            sources: ["Dummy.swift"]
+            sources: ["MDFInternationalizationPackage.swift"]
         ),
         .target(
-            name: "MDFTextAccessibility",
+            name: "MDFTextAccessibilityPackage",
             dependencies: [
                 .product(name: "MDFTextAccessibility", package: "material-text-accessibility-ios")
             ],
             path: "Sources",
-            sources: ["Dummy.swift"]
+            sources: ["MDFTextAccessibilityPackage.swift"]
         )
     ]
 )
